@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+<body>
+  <div class="form">
+    <h1>Login Page</h1>
+    <form onsubmit="Login(event)">
+      <label for="mail">Email</label>
+      <input type="text" id="mail" placeholder="Enter Email" />
+      <br><br>
+
+      <label for="pass">Password</label>
+      <input type="password" id="pass" placeholder="Enter Password" />
+      <br><br>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function Login(event) {
+      event.preventDefault(); 
+      
+      let email = document.getElementById("mail").value;
+      let password = document.getElementById("pass").value;
+
+      if (email === "hi@gmail.com" && password === "1234") {
+        console.log("Welcome ✅");
+        alert("Welcome!");
+      } else {
+        console.log("Invalid ❌");
+        alert("Invalid Credentials");
+      }
+    }
+  </script>
+</body>
+</html>
